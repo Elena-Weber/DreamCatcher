@@ -1,7 +1,7 @@
 const dreamsReducer = (state = { dreams: [] }, action) => {
     switch (action.type) {
 
-        case 'SET_DREAMS':
+        case 'FETCH_DREAMS':
             return [...action.payload]
         case 'ADD_DREAM':
             return [...state, action.payload]

@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { removeDream } from '../actions/dreamsActions';
+//import { updateDream } from '../actions/dreamsActions';
 
 const Dream = ({ dream, removeDream }) => {
 

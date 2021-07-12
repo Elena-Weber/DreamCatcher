@@ -3,7 +3,7 @@ export const fetchDreams = () => {
         return fetch('http://localhost:3000/dreams')
         .then(resp => resp.json())
         .then(dreams => {
-            dispatch({ type: "SET_DREAMS", payload: dreams })
+            dispatch({ type: "FETCH_DREAMS", payload: dreams })
         })
     }
 }

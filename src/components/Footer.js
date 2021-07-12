@@ -4,7 +4,7 @@ export default class Footer extends Component {
     render() {
         return (
             <div className="foot">
-                <h2>Footer will be here</h2>
+                <h3>@DreamCatcher 2021 - Welcome to the world of all possible</h3>
             </div>
         )
     }
