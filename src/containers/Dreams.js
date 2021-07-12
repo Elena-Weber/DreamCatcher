@@ -18,7 +18,7 @@ class Dreams extends Component {
 //{debugger}
         return (
             <div className="dreams">
-                <h3>Dreams here</h3>
+                <h3>Dreams are here</h3>
                 { dreams }
             </div>
         )

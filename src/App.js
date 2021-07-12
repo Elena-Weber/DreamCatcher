@@ -4,7 +4,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Dreams from './containers/Dreams';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import DreamNew from './DreamNew';
+import DreamNew from './containers/DreamNew';
 import Home from './containers/Home';
 
 class App extends React.Component {
