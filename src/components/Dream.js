@@ -6,7 +6,7 @@ import { removeDream } from '../actions/dreamsActions';
 const Dream = ({ dream, removeDream }) => {
 
     return (
-        <div className="dreamsDiv">
+        <div className="dreams-card">
             <div className="flip-card">
                 <div className="flip-card-inner">
                     <div className="flip-card-front">

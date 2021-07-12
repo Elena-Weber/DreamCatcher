@@ -3,7 +3,6 @@ import Dream from '../components/Dream'
 import { connect } from 'react-redux';
 import { fetchDreams } from '../actions/dreamsActions';
 
-//export 
 class Dreams extends Component {
 
     componentDidMount(){
@@ -14,17 +13,19 @@ class Dreams extends Component {
         if (this.props.dreams) {
 
     const dreams = this.props.dreams.map(( dream, index ) => <Dream key={ index } dream={ dream } />)
-    
+    let reverseDreams = dreams.reverse()
+
 //{debugger}
         return (
-            <div className="dreams">
-                <h3>Dreams are here</h3>
-                { dreams }
+            <div>
+                <h3 className="dream-heading">Dreams are here</h3>
+                {/* <div className="dreams">{ dreams }</div> */}
+                <div className="dreams">{ reverseDreams }</div>
             </div>
         )
     } else {console.log(this.props)
     return (
-        <div className="dreams">
+        <div>
             <h3>Dreams are (NOT) loading here</h3>
         </div>
     )
@@ -33,15 +34,15 @@ class Dreams extends Component {
 
 const mapStateToProps = state => {
     return {
-        dreams: state.dreams,
+        dreams: state,
     }
 }
 
-const dispatchToProps = dispatch => {
-    return {
-        fetchDreams: () => dispatch(fetchDreams())
-    }
-}
+// const dispatchToProps = dispatch => {
+//     return {
+//         fetchDreams: () => dispatch(fetchDreams())
+//     }
+// }
 
-// export default connect(mapStateToProps, { fetchDreams })(Dreams)
-export default connect(mapStateToProps, dispatchToProps)(Dreams)
+export default connect(mapStateToProps, { fetchDreams })(Dreams)
+// export default connect(mapStateToProps, dispatchToProps)(Dreams)
