@@ -5,7 +5,7 @@ const dreamsReducer = (state = [], action) => {
         case 'FETCH_DREAMS':
             return [...action.payload]
         case 'ADD_DREAM':
-            return [action.payload, ...state]
+            return [...state, action.payload]
         case 'REMOVE_DREAM':
             let newDreams = state.filter(dream => dream.id !== action.payload)
             return [...newDreams]

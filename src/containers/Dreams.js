@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Dream from '../components/Dream'
+import Dream from '../components/Dream';
 import { connect } from 'react-redux';
 import { fetchDreams } from '../actions/dreamsActions';
 
@@ -18,13 +18,13 @@ class Dreams extends Component {
 //{debugger}
         return (
             <div>
-                <h3 className="dream-heading">Dreams are here</h3>
+                <h3 className="dream-heading">All your dreams are here</h3>
                 {/* <div className="dreams">{ dreams }</div> */}
                 <div className="dreams">{ reverseDreams }</div>
             </div>
         )
     } else {console.log(this.props)
-    return (
+        return (
         <div>
             <h3>Dreams are (NOT) loading here</h3>
         </div>

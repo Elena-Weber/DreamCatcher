@@ -14,7 +14,8 @@ const Dream = ({ dream, removeDream }) => {
                     </div>
                     <div className="flip-card-back">    
                         <p>Description: {dream.description}</p><br />
-                        <div><button>Dream it</button></div><br />
+                        <div><button>{!dream.chosen ? "Dream it" : "Cancel this dream"}</button></div><br />
+                        {/* <div><button>Dream it</button></div><br /> */}
                         <div><button>Edit</button>   <button onClick={()=>removeDream(dream.id)}>Delete</button></div>
                     </div>
                 </div>
