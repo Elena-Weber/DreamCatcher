@@ -10,7 +10,6 @@ class ChosenDreams extends Component {
         return (
             <div>
                 <h3 className="dreamName">Tonight you're gonna be dreaming about:</h3>
-                {/* <Dreams dreams={this.props.chosenDreams} dispatch={this.props.dispatch} /> */}
                 <div className="dreams">{ chosen }</div>
             </div>
         )
