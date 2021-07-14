@@ -9,7 +9,7 @@ class ChosenDreams extends Component {
         const chosen = this.props.chosenDreams.map(( dream, index ) => <Dream key={ index } dream={ dream } />)
         return (
             <div>
-                <h3 className="dreamName">Tonight you're gonna be dreaming about:</h3>
+                <h2 className="dreamName">Tonight you're gonna be dreaming about</h2>
                 <div className="dreams">{ chosen }</div>
             </div>
         )

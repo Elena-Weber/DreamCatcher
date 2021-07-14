@@ -1,19 +1,92 @@
-.navi {
-  background-color: lightblue;
+body {
+  background-color: black;
+  background-image: url(https://images.unsplash.com/photo-1475274047050-1d0c0975c63e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1352&q=80);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  color: white;
+}
+
+.mainHeading {
   text-align: center;
+  padding: 10px;
+}
+
+.navi {
+  text-align: center;
+  font-size: large;
+  padding: 10px;
 }
 
 a {
-text-decoration: none;
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  animation: neon .08s ease-in-out infinite alternate;
+}
+
+@keyframes neon {
+  from {
+    text-shadow:
+    0 0 6px rgba(202,228,225,0.92),
+    0 0 30px rgba(202,228,225,0.34),
+    0 0 12px rgba(30,132,242,0.52),
+    0 0 21px rgba(30,132,242,0.92),
+    0 0 34px rgba(30,132,242,0.78),
+    0 0 54px rgba(30,132,242,0.92);
+  }
+  to {
+    text-shadow:
+    0 0 6px rgba(202,228,225,0.98),
+    0 0 30px rgba(202,228,225,0.42),
+    0 0 12px rgba(30,132,242,0.58),
+    0 0 22px rgba(30,132,242,0.84),
+    0 0 38px rgba(30,132,242,0.88),
+    0 0 60px rgba(30,132,242,1);
+  }
+}
+
+button {
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+button:hover {
+  box-shadow: 1px 1px 5px 1px white;
+  cursor: pointer;
+}
+
+.btn {
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+.btn:hover {
+  box-shadow: 1px 1px 5px 1px white;
+  cursor: pointer;
+}
+
+input {
+  width: 30%;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: medium;
+}
+
+textarea {
+  padding: 10px;
+  border-radius: 5px;
+  font-size: large;
 }
 
 .foot {
-  background-color: lavender;
   text-align: center;
+  padding: 10px;
 }
 
 .dreams {
-  background-color: bisque;
   text-align: center;
   display: flex;
   flex-wrap: wrap;
@@ -27,15 +100,14 @@ text-decoration: none;
 .dreams-card {
   display: flex;
   justify-content: center;
-  
 }
 
 .dream-heading {
   text-align: center;
 }
 
-.new-dream {
-  background-color: darkseagreen;
+.new-dream, .search {
+  text-align: center;
 }
 
 .flip-card {
@@ -51,7 +123,7 @@ text-decoration: none;
 }
 
 .flip-card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  animation: neon .08s ease-in-out infinite alternate;
 }
 
 .flip-card-inner {
@@ -81,8 +153,6 @@ text-decoration: none;
 }
 
 .flip-card-back {
-  /* background-color: dodgerblue;
-  color: white; */
   transform: rotateY(180deg);
   
 }

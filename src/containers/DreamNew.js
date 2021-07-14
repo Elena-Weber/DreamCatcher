@@ -20,20 +20,20 @@ class DreamNew extends Component {
     render() {
         return (
             <div className="new-dream">
-                <h1>Create a new dream here</h1>
+                <h2>Create an amazing new dream here</h2>
                 <form onSubmit={this.handleSubmit}>
                     <div>
-                        <label htmlFor="nameInput">Dream's name: </label>
+                        <label htmlFor="nameInput">Dream's name: </label><br /><br />
                         <input type="text" name="name" id="name" value={this.state.name} onChange={this.handleChange} placeholder="Name your dream" />
                     </div>
-                    <br />
+                    <br /><br /><br />
                     <div>
-                        <label htmlFor="nameInput">Dream's details: </label>
-                        <textarea type="text" name="description" id="description" rows="8" cols="60" value={this.state.description} onChange={this.handleChange} placeholder="To fully enjoy your custom-made dream, please provide as many details as possible" />
+                        <label htmlFor="nameInput">Dream's details: </label><br /><br />
+                        <textarea type="text" name="description" id="description" rows="10" cols="80" value={this.state.description} onChange={this.handleChange} placeholder="To fully enjoy your custom-made dream, please provide as many details as possible" />
                     </div>
-                    <br />
+                    <br /><br /><br />
                     <div>
-                        <input type="submit" value="Create a new dream" />
+                        <input className="btn" type="submit" value="Create a new dream" />
                     </div>
                 </form>
             </div>

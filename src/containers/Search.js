@@ -15,11 +15,11 @@ export default class Search extends Component {
     
     render() {
         return (
-            <div>
-                <h2>Search is here</h2>
+            <div className="search">
+                <h2>Search is here</h2><br />
                 <form>
                     <div>
-                        <label htmlFor="search">Start typing to find a dream </label>
+                        <label htmlFor="search">Start typing to find a dream </label><br /><br />
                         <input type="text" name="search" id="search" onChange={this.handleChange} placeholder="Search for..." />
                     </div>
                     

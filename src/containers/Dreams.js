@@ -18,7 +18,7 @@ class Dreams extends Component {
 //{debugger}
         return (
             <div>
-                <h3 className="dream-heading">All your dreams are here</h3>
+                <h2 className="dream-heading">All your custom-made dreams are here. Enjoy!</h2>
                 {/* <div className="dreams">{ dreams }</div> */}
                 <div className="dreams">{ reverseDreams }</div>
             </div>
