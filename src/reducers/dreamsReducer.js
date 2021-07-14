@@ -1,4 +1,3 @@
-//const dreamsReducer = (state = { dreams: [{id: 15, name: "Italy", description: "Cool", chosen: false}] }, action) => {
 const dreamsReducer = (state = [], action) => {
     switch (action.type) {
 
@@ -9,8 +8,11 @@ const dreamsReducer = (state = [], action) => {
         case 'REMOVE_DREAM':
             let newDreams = state.filter(dream => dream.id !== action.payload)
             return [...newDreams]
-        // case 'EDIT_DREAM':
-        //     return [...action.payload]    
+        case 'UPDATE_DREAM':
+            return [...state, action.payload]
+        // case 'TOGGLE_DREAM':
+        //     let newState = state.map(dream => dream.id === action.payload ? {...dream, chosen: !dream.chosen} : dream)
+        //     return [...newState]
         default:
             return state
     }

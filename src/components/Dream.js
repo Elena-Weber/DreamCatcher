@@ -1,9 +1,17 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { removeDream } from '../actions/dreamsActions';
-//import { updateDream } from '../actions/dreamsActions';
+import { toggleDream } from '../actions/dreamsActions';
+import { NavLink } from 'react-router-dom';
 
-const Dream = ({ dream, removeDream }) => {
+const Dream = ({ dream, removeDream, toggleDream }) => {
+
+    const handleEdit = (dream) => {console.log(dream)
+        //let dreamId = dream.id
+        //setState({
+            //dreamId: dream.id
+        //})
+    }
 
     return (
         <div className="dreams-card">
@@ -14,9 +22,12 @@ const Dream = ({ dream, removeDream }) => {
                     </div>
                     <div className="flip-card-back">    
                         <p>Description: {dream.description}</p><br />
-                        <div><button>{!dream.chosen ? "Dream it!" : "You're dreaming it. Cancel?"}</button></div><br />
-                        {/* <div><button>Dream it</button></div><br /> */}
-                        <div><button>Edit</button>   <button onClick={()=>removeDream(dream.id)}>Delete</button></div>
+                        <div>
+                            <button onClick={()=>toggleDream(dream.id)}>{!dream.chosen ? "Dream it!" : "You're dreaming it. Cancel?"}</button></div><br />
+                        {/* <div><button>{!dream.chosen ? "Dream it!" : "You're dreaming it. Cancel?"}</button></div><br /> */}
+                        <div>
+                            <NavLink to="/dreams/update"><button onClick={()=>handleEdit(dream)}>Edit</button></NavLink>  <button onClick={()=>removeDream(dream.id)}>Delete</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -24,4 +35,4 @@ const Dream = ({ dream, removeDream }) => {
     )
 }
 
-export default connect(null, { removeDream })(Dream)
+export default connect(null, { removeDream, toggleDream })(Dream)

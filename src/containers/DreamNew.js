@@ -29,7 +29,7 @@ class DreamNew extends Component {
                     <br />
                     <div>
                         <label htmlFor="nameInput">Dream's details: </label>
-                        <textarea type="text" name="description" id="description" rows="5" cols="40" value={this.state.description} onChange={this.handleChange} placeholder="Provide as many details as possible to fully enjoy your custom-made dream" />
+                        <textarea type="text" name="description" id="description" rows="8" cols="60" value={this.state.description} onChange={this.handleChange} placeholder="To fully enjoy your custom-made dream, please provide as many details as possible" />
                     </div>
                     <br />
                     <div>
