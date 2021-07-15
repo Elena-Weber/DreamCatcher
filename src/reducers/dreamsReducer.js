@@ -10,11 +10,11 @@ const dreamsReducer = (state = [], action) => {
             return [...newDreams]
         case 'UPDATE_DREAM':
             let dreamsAll = [...state]
-            //let dreamIndex = 
+            // let dreamIndex = 
             dreamsAll.findIndex(dream => dream.id === action.payload.id)
-            //dreamsAll(dreamIndex) = action.payload
+            // dreamsAll(dreamIndex) = action.payload
             console.log(dreamsAll, action.payload)
-            return [...dreamsAll]
+            return [...dreamsAll, action.payload]
         case 'TOGGLE_DREAM':
             let dreamsArray = [...state]
             //let dreamToToggle = 
