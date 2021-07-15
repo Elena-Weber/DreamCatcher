@@ -16,6 +16,8 @@ class App extends React.Component {
   // }
   
   render() {
+  console.log(this.props)
+  
     return (
     <div className="App">
       <header className="App-header">
@@ -28,7 +30,7 @@ class App extends React.Component {
           <Route exact path="/dreams/new" component={ DreamNew } />
           <Route exact path="/dreams/chosen" component={ ChosenDreams } />
           <Route exact path="/search" component={ Search } />
-          <Route exact path="/dreams/update" component={ DreamUpdate } />
+          <Route exact path="/dreams/:id/update" component={ DreamUpdate } />
         </Switch>
         <Footer />
       </Router>

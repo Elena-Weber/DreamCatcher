@@ -13,17 +13,18 @@ class DreamUpdate extends Component {
                 chosen: false
             }
 
-        // this.state = {
-        //     id: this.props.dream.id,
-        //     name: this.props.dream.name,
-        //     description: this.props.dream.id,
-        //     chosen: false
-        // }
     }
 
     componentDidMount(){
+        this.setState({
+                id: this.props.dream.id,
+                name: this.props.dream.name,
+                description: this.props.dream.description,
+                chosen: this.props.dream.chosen
+            })
         this.findDream()
     }
+
     findDream = () => {
         console.log(this.state)
         //console.log(this.props.dreams)
@@ -40,7 +41,7 @@ class DreamUpdate extends Component {
     //handleSubmit = e => {e.preventDefault(); console.log(e)}
     handleSubmit = e => {e.preventDefault(); this.props.updateDream(this.state); console.log(this.state)}
 
-    render() {
+    render() { console.log(this.props)
         //{debugger}
         return (
             <div className="new-dream">
@@ -65,8 +66,9 @@ class DreamUpdate extends Component {
     }
 }
 
-const mapStateToProps = state => {
-    return { dreams: state }
+const mapStateToProps = (state, dreamId) => {
+    const id = parseInt(dreamId.match.params.id)
+    return { dream: state.find(dream => dream.id === id) }
 }
 
 export default connect(mapStateToProps, {updateDream})(DreamUpdate)
