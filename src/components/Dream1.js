@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import { removeDream } from '../actions/dreamsActions';
 import { toggleDream } from '../actions/dreamsActions';
 import { NavLink } from 'react-router-dom';
-//import DreamUpdate from '../containers/DreamUpdate';
 
 const Dream = ({ dream, removeDream, toggleDream }) => {
 
@@ -26,9 +25,6 @@ const Dream = ({ dream, removeDream, toggleDream }) => {
                         {/* <div><button>{!dream.chosen ? "Dream it!" : "You're dreaming it. Cancel?"}</button></div><br /> */}
                         <div>
                             <NavLink to={`/dreams/${dream.id}/update`}><button onClick={()=>handleEdit(dream)}>Edit</button></NavLink>  <button onClick={()=>removeDream(dream.id)}>Delete</button>
-                            
-                            {/* <NavLink to={`/dreams/${dream.id}/update`} render={(dream) => { <DreamUpdate dream={dream}/> }}><button onClick={()=>handleEdit(dream)}>Edit</button></NavLink>  <button onClick={()=>removeDream(dream.id)}>Delete</button> */}
-                        
                         </div>
                     </div>
                 </div>

@@ -13,7 +13,7 @@ const dreamsReducer = (state = [], action) => {
             //let dreamIndex = 
             dreamsAll.findIndex(dream => dream.id === action.payload.id)
             //dreamsAll(dreamIndex) = action.payload
-            console.log(dreamsAll)
+            console.log(dreamsAll, action.payload)
             return [...dreamsAll]
         case 'TOGGLE_DREAM':
             let dreamsArray = [...state]

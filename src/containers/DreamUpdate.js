@@ -12,24 +12,23 @@ class DreamUpdate extends Component {
                 description: '',
                 chosen: false
             }
-
     }
 
     componentDidMount(){
         this.setState({
-                id: this.props.dream.id,
-                name: this.props.dream.name,
-                description: this.props.dream.description,
-                chosen: this.props.dream.chosen
-            })
+            id: this.props.dream.id,
+            name: this.props.dream.name,
+            description: this.props.dream.description,
+            chosen: this.props.dream.chosen
+        })
     }
 
     handleChange = e => {this.setState({[e.target.name]: e.target.value}); console.log(e.target.value, this.props)}
-    //handleSubmit = e => {e.preventDefault(); console.log(e)}
+
     handleSubmit = e => {e.preventDefault(); this.props.updateDream(this.state); console.log(this.state)}
 
     render() { console.log(this.props)
-        //{debugger}
+
         return (
             <div className="new-dream">
                 <h1>Edit your dream here</h1>
@@ -45,7 +44,7 @@ class DreamUpdate extends Component {
                     </div>
                     <br />
                     <div>
-                        <input type="submit" value="Update the dream" />
+                    <input type="submit" value="Update the dream" />
                     </div>
                 </form>
             </div>
