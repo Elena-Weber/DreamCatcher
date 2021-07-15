@@ -3,23 +3,32 @@ import { updateDream } from '../actions/dreamsActions';
 import { connect } from 'react-redux';
 
 class DreamUpdate extends Component {
-    constructor(props) {
-        super(props)
+    constructor() {
+        super()
     
         this.state = {
-            id: '',
-            name: '',
-            description: '',
-            chosen: false
-        }
+                id: '',
+                name: '',
+                description: '',
+                chosen: false
+            }
+
+        // this.state = {
+        //     id: this.props.dream.id,
+        //     name: this.props.dream.name,
+        //     description: this.props.dream.id,
+        //     chosen: false
+        // }
     }
+
     componentDidMount(){
         this.findDream()
     }
     findDream = () => {
         console.log(this.state)
+        //console.log(this.props.dreams)
     //     //const { dreams, dreamId} = this.props
-    //     //const dream = dreams.find(dream => dream.id === dreamId)
+            //const dream = this.props.dreams.find(dream => dream.id === dreamId)
         // this.setState({
         //     id: dream.id,
         //     name: dream.name,
@@ -27,7 +36,7 @@ class DreamUpdate extends Component {
         // })
     }
 
-    handleChange = e => {this.setState({[e.target.name]: e.target.value}); console.log(e.target.value)}
+    handleChange = e => {this.setState({[e.target.name]: e.target.value}); console.log(e.target.value, this.props)}
     //handleSubmit = e => {e.preventDefault(); console.log(e)}
     handleSubmit = e => {e.preventDefault(); this.props.updateDream(this.state); console.log(this.state)}
 
@@ -57,7 +66,7 @@ class DreamUpdate extends Component {
 }
 
 const mapStateToProps = state => {
-    return { dreams: state.dreams }
+    return { dreams: state }
 }
 
 export default connect(mapStateToProps, {updateDream})(DreamUpdate)

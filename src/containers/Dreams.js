@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import Dream from '../components/Dream';
+//import Dream from '../components/Dream';
+import Dream1 from '../components/Dream1';
 import { connect } from 'react-redux';
 import { fetchDreams } from '../actions/dreamsActions';
 
@@ -12,7 +13,7 @@ class Dreams extends Component {
     render() {
         if (this.props.dreams) {
 
-    const dreams = this.props.dreams.map(( dream, index ) => <Dream key={ index } dream={ dream } />)
+    const dreams = this.props.dreams.map(( dream, index ) => <Dream1 key={ index } dream={ dream } />)
     let reverseDreams = dreams.reverse()
 
 //{debugger}

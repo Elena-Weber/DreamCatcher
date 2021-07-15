@@ -1,12 +1,23 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { NavLink } from 'react-router-dom';
 
-export default class Home extends Component {
-    render() {
-        return (
+const Home = () => {
+    return (
+        <div className="foot">
             <div>
-                <h1 className="mainHeading"><NavLink to="/">DreamCatcher</NavLink> - your best workshop for dreams (make yourself a little dream tonight...) 😴</h1>
+                <h1 className="mainHeading"><NavLink to="/">DreamCatcher</NavLink> - the world's first workshop (make yourself a little dream tonight...) 😴</h1>
             </div>
-        )
-    }
+        </div>
+    )
 }
+export default Home
+
+// export default class Home extends React.Component {
+//     render() {
+//         return (
+//             <div>
+//                 <h1 className="mainHeading"><NavLink to="/">DreamCatcher</NavLink> - the world's first workshop (make yourself a little dream tonight...) 😴</h1>
+//             </div>
+//         )
+//     }
+// }
