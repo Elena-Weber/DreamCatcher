@@ -25,7 +25,7 @@ class DreamUpdate extends Component {
 
     handleChange = e => {this.setState({[e.target.name]: e.target.value}); console.log(e.target.value, this.props)}
 
-    handleSubmit = e => {e.preventDefault(); this.props.updateDream(this.state); console.log(this.state)}
+    handleSubmit = e => {e.preventDefault(); this.props.updateDream(this.state); this.props.history.push('/dreams'); console.log(this.state)}
 
     render() { console.log(this.props)
 

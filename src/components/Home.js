@@ -5,7 +5,7 @@ const Home = () => {
     return (
         <div className="foot">
             <div>
-                <h1 className="mainHeading"><NavLink to="/">DreamCatcher</NavLink> - the world's first workshop (make yourself a little dream tonight...) 😴</h1>
+                <h1 className="mainHeading"><NavLink to="/">DreamCatcher</NavLink> - the world's first workshop for dreams 😴</h1>
             </div>
         </div>
     )
