@@ -22,19 +22,6 @@ class DreamUpdate extends Component {
                 description: this.props.dream.description,
                 chosen: this.props.dream.chosen
             })
-        this.findDream()
-    }
-
-    findDream = () => {
-        console.log(this.state)
-        //console.log(this.props.dreams)
-    //     //const { dreams, dreamId} = this.props
-            //const dream = this.props.dreams.find(dream => dream.id === dreamId)
-        // this.setState({
-        //     id: dream.id,
-        //     name: dream.name,
-        //     description: dream.description
-        // })
     }
 
     handleChange = e => {this.setState({[e.target.name]: e.target.value}); console.log(e.target.value, this.props)}
