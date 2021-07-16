@@ -1,7 +1,7 @@
 import React from 'react';
 import { searchDreams } from '../actions/dreamsActions';
 import { connect } from 'react-redux';
-import Dream1 from '../components/Dream1';
+import Dream1 from '../components/Dream';
 
 // export default 
 class Search extends React.Component {
@@ -47,13 +47,13 @@ console.log(searched)
 }
 
 const mapStateToProps = state => {
-    return {
-        searchedDreams: state
-        // .filter(dream => dream)
-    }
+    // let value = action.payload.value
+    // if (value) {
+    //     let filteredValues = state.filter(dream => {
+    //         dream.name.toLowerCase().startsWith(value)}
+    //     return { searchedDreams: filteredValues }
+    // } else {
+        return { searchedDreams: state }
 }
-// function mapStateToProps(state) {
-//     return {state};
-// }
 
 export default connect(mapStateToProps, { searchDreams })(Search)

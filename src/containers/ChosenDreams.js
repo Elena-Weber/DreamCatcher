@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-//import Dreams from './Dreams';
 import Dream from '../components/Dream'
 import { connect } from 'react-redux'
 

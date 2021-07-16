@@ -24,11 +24,14 @@ const dreamsReducer = (state = [], action) => {
             return [...dreamsArray]
         case 'SEARCH_DREAMS':
             console.log(state)
-            let value = action.payload.value;
-            if (value) {
-                let filteredValues = state.filter(dream => {
-                //console.log(dream.name)
-                    return dream.name.toLowerCase().startsWith(value)
+            let searchTerm = action.payload.value;
+            let stateCopy = [...state]
+            if (searchTerm) {
+                let filteredValues = stateCopy.filter(dream => {
+                console.log(dream.name)
+                let dreamToCheck = dream.name.toLowerCase().startsWith(searchTerm)
+                console.log(dreamToCheck)
+                    return dream.name.toLowerCase().startsWith(searchTerm)
                     // || dream.description.toLowerCase().startsWith(value);
                     })
                 console.log(filteredValues)
