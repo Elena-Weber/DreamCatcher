@@ -3,13 +3,26 @@ import React, { Component } from 'react';
 import Dream1 from '../components/Dream1';
 import { connect } from 'react-redux';
 import { fetchDreams } from '../actions/dreamsActions';
+import Search from './Search';
+
 
 class Dreams extends Component {
+
+    constructor() {
+        super()
+    
+        this.state = {
+                id: '',
+                name: '',
+                description: '',
+                chosen: false
+            }
+    }
 
     componentDidMount(){
         this.props.fetchDreams()
     }
-
+    
     render() {
         if (this.props.dreams) {
 
@@ -19,6 +32,7 @@ class Dreams extends Component {
 //{debugger}
         return (
             <div>
+            < Search />
                 <h2 className="dream-heading">All your custom-made dreams are here. Enjoy!</h2>
                 {/* <div className="dreams">{ dreams }</div> */}
                 <div className="dreams">{ reverseDreams }</div>

@@ -12,9 +12,7 @@ export const addDream = dream => {
     return (dispatch) => {
         return fetch('http://localhost:3000/dreams', {
             method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
+            headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({dream:dream})
         })
         .then(resp => resp.json())
@@ -28,9 +26,7 @@ export const removeDream = dreamID => {
     return (dispatch) => {
         return fetch(`http://localhost:3000/dreams/${dreamID}`,{
             method: 'DELETE',
-            headers: {
-                'Content-Type': 'application/json'
-            }
+            headers: { 'Content-Type': 'application/json' }
         })
         .then(resp => resp.json())
         .then(dream => {
@@ -69,3 +65,8 @@ export const toggleDream = dream => {
     }
 }
 
+export const searchDreams = payload => {
+    return (dispatch) => {
+    console.log(payload.value)
+    dispatch({ type: "SEARCH_DREAMS", payload })
+}}

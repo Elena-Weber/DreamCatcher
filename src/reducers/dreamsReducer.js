@@ -22,6 +22,20 @@ const dreamsReducer = (state = [], action) => {
             console.log(action.payload.chosen)
             //action.payload = dreamsArray(dreamToToggle)
             return [...dreamsArray]
+        case 'SEARCH_DREAMS':
+            console.log(state)
+            let value = action.payload.value;
+            if (value) {
+                let filteredValues = state.filter(dream => {
+                //console.log(dream.name)
+                    return dream.name.toLowerCase().startsWith(value)
+                    // || dream.description.toLowerCase().startsWith(value);
+                    })
+                console.log(filteredValues)
+                return [filteredValues]
+            } else {
+                return state
+            }
         default:
             return state
     }
