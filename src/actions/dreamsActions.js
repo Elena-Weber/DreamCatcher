@@ -51,7 +51,7 @@ export const updateDream = dream => {
 }
 
 export const toggleDream = dream => {
-    console.log('you clicked a dream with id', dream)
+    console.log('you clicked a dream', dream)
     return (dispatch) => {
         return fetch(`http://localhost:3000/dreams/${dream.id}`,{
             method: 'PATCH',

@@ -1,7 +1,7 @@
 import React from 'react';
 import { searchDreams } from '../actions/dreamsActions';
 import { connect } from 'react-redux';
-import Dream1 from '../components/Dream';
+import Dream from '../components/Dream';
 
 // export default 
 class Search extends React.Component {
@@ -24,7 +24,7 @@ class Search extends React.Component {
 
     render() {
 
-        const searched = this.props.searchedDreams.map(( dream, index ) => <Dream1 key={ index } dream={ dream } />)
+        const searched = this.props.searchedDreams.map(( dream, index ) => <Dream key={ index } dream={ dream } />)
 console.log(searched)
 // {debugger}
 
@@ -54,6 +54,8 @@ const mapStateToProps = state => {
     //     return { searchedDreams: filteredValues }
     // } else {
         return { searchedDreams: state }
+        // return state
 }
 
+// export default connect(mapStateToProps)(Search)
 export default connect(mapStateToProps, { searchDreams })(Search)

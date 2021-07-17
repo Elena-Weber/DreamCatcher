@@ -17,9 +17,17 @@ const dreamsReducer = (state = [], action) => {
             return [...dreamsAll, action.payload]
         case 'TOGGLE_DREAM':
             let dreamsArray = [...state]
-            //let dreamToToggle = 
-            dreamsArray.findIndex(dream => dream.id === action.payload ? dream.chosen = !dream.chosen : dream)
-            console.log(action.payload.chosen)
+            //let dreamIndex = action.payload.id
+            let dreamToToggle = dreamsArray.find(dream => dream.id === action.payload.id)
+            console.log(dreamToToggle)
+            // if (dreamToToggle.chosen) {
+            //     return !dreamToToggle
+            // } else {
+            //     return dreamToToggle
+            // }
+            // dreamsArray.findIndex(dream => dream.id === action.payload.id ? dream.chosen = !dream.chosen : dream)
+            // dreamsArray.findIndex(dream => dream.id === action.payload.id ? dream.chosen = !dream.chosen : console.log(dream, "These are dreams that don't match id"))
+            console.log(action.payload.id, "This is id from payload")
             //action.payload = dreamsArray(dreamToToggle)
             return [...dreamsArray]
         case 'SEARCH_DREAMS':

@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import Dream from '../components/Dream';
 import { connect } from 'react-redux';
 import { fetchDreams } from '../actions/dreamsActions';
-// import Search from './Search';
-
+import Search from '../components/Search';
 
 class Dreams extends Component {
 
@@ -14,7 +13,8 @@ class Dreams extends Component {
                 id: '',
                 name: '',
                 description: '',
-                chosen: false
+                chosen: false,
+                term: ""
             }
     }
 
@@ -22,29 +22,42 @@ class Dreams extends Component {
         this.props.fetchDreams()
     }
     
-    render() {
-        if (this.props.dreams) {
+    searchDreams = (term) => {
+        this.setState({
+            // ???
+            term: term 
+        })
+    }
+
+    filterIt = () => {
+        let lowerStateTerm = this.state.term.toLowerCase()
+        let filteredDreams = this.props.dreams.filter(dream => dream.name.toLowerCase().includes(lowerStateTerm)
+        )
+        //  || dream.description.toLowerCase().includes(lowerStateTerm))
+        console.log(filteredDreams)
+        return (filteredDreams.map( (dream, index) => { return <Dream dream={dream} key={index} /> }))
+        // return filteredDreams
+    } 
+
+    render() { console.log(this.state.term)
 
     const dreams = this.props.dreams.map(( dream, index ) => <Dream key={ index } dream={ dream } />)
     let reverseDreams = dreams.reverse()
 
 //{debugger}
-        return (
-            <div>
-            {/* < Search /> */}
+        return ( 
+            <>
+                < Search searchTermProp={this.state.term} search={this.searchDreams} />
+                <div>
                 <h2 className="dream-heading">All your custom-made dreams are here. Enjoy!</h2>
                 {/* <div className="dreams">{ dreams }</div> */}
+                {this.filterIt()}
                 <div className="dreams">{ reverseDreams }</div>
-            </div>
+                </div>
+            </>
         )
-    } else {console.log(this.props)
-        return (
-        <div>
-            <h3>Dreams are (NOT) loading here</h3>
-        </div>
-    )
     }
-}}
+}
 
 const mapStateToProps = state => {
     return {
