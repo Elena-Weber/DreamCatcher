@@ -7,7 +7,7 @@ const Search = (props) => {
     }
 
     return (
-        <input type="text" placeholder="Search for a dream here" onChange={onChangeHandler} value={props.searchTermProp} />
+        <div><input type="text" placeholder="Start typing to find a dream" onChange={onChangeHandler} value={props.searchTermProp} /></div>
     )
 }
 

@@ -33,26 +33,30 @@ class Dreams extends Component {
         let lowerStateTerm = this.state.term.toLowerCase()
         let filteredDreams = this.props.dreams.filter(dream => dream.name.toLowerCase().includes(lowerStateTerm)
         )
+        let updatedDreams = filteredDreams.reverse()
         //  || dream.description.toLowerCase().includes(lowerStateTerm))
         console.log(filteredDreams)
-        return (filteredDreams.map( (dream, index) => { return <Dream dream={dream} key={index} /> }))
+        return (updatedDreams.map( (dream, index) => { return <Dream dream={dream} key={index} /> }))
+        // return (filteredDreams.map( (dream, index) => { return <Dream dream={dream} key={index} /> }))
         // return filteredDreams
     } 
 
     render() { console.log(this.state.term)
 
-    const dreams = this.props.dreams.map(( dream, index ) => <Dream key={ index } dream={ dream } />)
-    let reverseDreams = dreams.reverse()
+    // const dreams = this.props.dreams.map(( dream, index ) => <Dream key={ index } dream={ dream } />)
+    // let reverseDreams = dreams.reverse()
 
 //{debugger}
         return ( 
             <>
+                <div className="search">
                 < Search searchTermProp={this.state.term} search={this.searchDreams} />
+                </div>
                 <div>
                 <h2 className="dream-heading">All your custom-made dreams are here. Enjoy!</h2>
                 {/* <div className="dreams">{ dreams }</div> */}
-                {this.filterIt()}
-                <div className="dreams">{ reverseDreams }</div>
+                <div className="dreams">{this.filterIt()}</div>
+                {/* <div className="dreams">{ reverseDreams }</div> */}
                 </div>
             </>
         )

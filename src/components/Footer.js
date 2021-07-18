@@ -9,14 +9,3 @@ const Footer = () => {
         )
 }
 export default Footer
-
-
-// export default class Footer extends React.Component {
-//     render() {
-//         return (
-//             <div className="foot">
-//                 <h3><NavLink to="/">@DreamCatcher 2021</NavLink> - Welcome to the world of all possible</h3>
-//             </div>
-//         )
-//     }
-// }

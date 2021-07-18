@@ -30,23 +30,23 @@ const dreamsReducer = (state = [], action) => {
             console.log(action.payload.id, "This is id from payload")
             //action.payload = dreamsArray(dreamToToggle)
             return [...dreamsArray]
-        case 'SEARCH_DREAMS':
-            console.log(state)
-            let searchTerm = action.payload.value;
-            let stateCopy = [...state]
-            if (searchTerm) {
-                let filteredValues = stateCopy.filter(dream => {
-                console.log(dream.name)
-                let dreamToCheck = dream.name.toLowerCase().startsWith(searchTerm)
-                console.log(dreamToCheck)
-                    return dream.name.toLowerCase().startsWith(searchTerm)
-                    // || dream.description.toLowerCase().startsWith(value);
-                    })
-                console.log(filteredValues)
-                return [filteredValues]
-            } else {
-                return state
-            }
+        // case 'SEARCH_DREAMS':
+        //     console.log(state)
+        //     let searchTerm = action.payload.value;
+        //     let stateCopy = [...state]
+        //     if (searchTerm) {
+        //         let filteredValues = stateCopy.filter(dream => {
+        //         console.log(dream.name)
+        //         let dreamToCheck = dream.name.toLowerCase().startsWith(searchTerm)
+        //         console.log(dreamToCheck)
+        //             return dream.name.toLowerCase().startsWith(searchTerm)
+        //             // || dream.description.toLowerCase().startsWith(value);
+        //             })
+        //         console.log(filteredValues)
+        //         return [filteredValues]
+        //     } else {
+        //         return state
+        //     }
         default:
             return state
     }

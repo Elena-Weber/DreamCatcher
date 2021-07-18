@@ -65,8 +65,8 @@ export const toggleDream = dream => {
     }
 }
 
-export const searchDreams = payload => {
-    return (dispatch) => {
-    console.log(payload.value)
-    dispatch({ type: "SEARCH_DREAMS", payload })
-}}
+// export const searchDreams = payload => {
+//     return (dispatch) => {
+//     console.log(payload.value)
+//     dispatch({ type: "SEARCH_DREAMS", payload })
+// }}

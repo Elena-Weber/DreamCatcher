@@ -22,7 +22,6 @@ const Dream = ({ dream, removeDream, toggleDream }) => {
                         <p>Description: {dream.description}</p><br />
                         <div>
                             <button onClick={()=>toggleDream(dream)}>{!dream.chosen ? "Dream it!" : "You're dreaming it. Cancel?"}</button></div><br />
-                        {/* <div><button>{!dream.chosen ? "Dream it!" : "You're dreaming it. Cancel?"}</button></div><br /> */}
                         <div>
                             <NavLink to={`/dreams/${dream.id}/update`}><button onClick={()=>handleEdit(dream)}>Edit</button></NavLink>  <button onClick={()=>removeDream(dream.id)}>Delete</button>
                         </div>
