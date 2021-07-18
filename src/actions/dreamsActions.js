@@ -36,7 +36,7 @@ export const removeDream = dreamID => {
 }
 
 export const updateDream = dream => {
-    console.log('you are trying to update this dream', dream)
+    // console.log('you are trying to update this dream', dream)
     return (dispatch) => {
         return fetch(`http://localhost:3000/dreams/${dream.id}`, {
             method: 'PATCH',
@@ -44,8 +44,8 @@ export const updateDream = dream => {
             body: JSON.stringify({dream: dream})
         })
             .then(resp => resp.json())
-            .then(dream => {
-            dispatch({type: 'UPDATE_DREAM', payload: dream})
+            .then(updDream => {
+            dispatch({type: 'UPDATE_DREAM', payload: updDream})
         })
     }
 }

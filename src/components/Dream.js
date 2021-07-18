@@ -3,13 +3,14 @@ import { connect } from 'react-redux';
 import { removeDream } from '../actions/dreamsActions';
 import { toggleDream } from '../actions/dreamsActions';
 import { NavLink } from 'react-router-dom';
+import { updateDream } from '../actions/dreamsActions';
 
 const Dream = ({ dream, removeDream, toggleDream }) => {
 
-    const handleEdit = (dream) => {console.log(dream)
-        let dreamId = dream.id
-        console.log(dreamId)
-    }
+    // const handleEdit = (dream) => {console.log(dream)
+    //     let dreamId = dream.id
+    //     console.log(dreamId)
+    // }
 
     return (
         <div className="dreams-card">
@@ -20,10 +21,12 @@ const Dream = ({ dream, removeDream, toggleDream }) => {
                     </div>
                     <div className="flip-card-back">    
                         <p>Description: {dream.description}</p><br />
+                        {/* <div>
+                            <button onClick={()=>toggleDream(dream)}>{!dream.chosen ? "Dream it!" : "You're dreaming it. Cancel?"}</button>
+                        </div> */}
+                        <br />
                         <div>
-                            <button onClick={()=>toggleDream(dream)}>{!dream.chosen ? "Dream it!" : "You're dreaming it. Cancel?"}</button></div><br />
-                        <div>
-                            <NavLink to={`/dreams/${dream.id}/update`}><button onClick={()=>handleEdit(dream)}>Edit</button></NavLink>  <button onClick={()=>removeDream(dream.id)}>Delete</button>
+                            <NavLink to={`/dreams/${dream.id}/update`}><button onClick={()=>updateDream(dream)}>Edit</button></NavLink>  <button onClick={()=>removeDream(dream.id)}>Delete</button>
                         </div>
                     </div>
                 </div>
@@ -32,4 +35,4 @@ const Dream = ({ dream, removeDream, toggleDream }) => {
     )
 }
 
-export default connect(null, { removeDream, toggleDream })(Dream)
+export default connect(null, { removeDream, updateDream, toggleDream })(Dream)
