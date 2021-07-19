@@ -36,7 +36,7 @@ export const removeDream = dreamID => {
 }
 
 export const updateDream = dream => {
-    // console.log('you are trying to update this dream', dream)
+    // console.log('you are trying to update this dream, dream)
     return (dispatch) => {
         return fetch(`http://localhost:3000/dreams/${dream.id}`, {
             method: 'PATCH',
@@ -64,9 +64,3 @@ export const toggleDream = dream => {
         })
     }
 }
-
-// export const searchDreams = payload => {
-//     return (dispatch) => {
-//     console.log(payload.value)
-//     dispatch({ type: "SEARCH_DREAMS", payload })
-// }}
