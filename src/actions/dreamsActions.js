@@ -50,17 +50,17 @@ export const updateDream = dream => {
     }
 }
 
-export const toggleDream = dream => {
-    console.log('you clicked a dream', dream)
-    return (dispatch) => {
-        return fetch(`http://localhost:3000/dreams/${dream.id}`,{
-            method: 'PATCH',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({dream: dream})
-        })
-            .then(resp => resp.json())
-            .then(dream => {
-            dispatch({ type: "TOGGLE_DREAM", payload: dream })
-        })
-    }
-}
+// export const toggleDream = dream => {
+//     console.log('you clicked this dream', dream)
+//     return (dispatch) => {
+//         return fetch(`http://localhost:3000/dreams/${dream.id}`,{
+//             method: 'PATCH',
+//             headers: { 'Content-Type': 'application/json' },
+//             body: JSON.stringify({dream: dream})
+//         })
+//             .then(resp => resp.json())
+//             .then(chDream => {
+//             dispatch({ type: "TOGGLE_DREAM", payload: chDream })
+//         })
+//     }
+// }

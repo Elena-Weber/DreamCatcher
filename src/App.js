@@ -6,14 +6,30 @@ import Dreams from './containers/Dreams';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import DreamNew from './containers/DreamNew';
 import Header from './components/Header';
-import ChosenDreams from './containers/ChosenDreams';
+// import ChosenDreams from './containers/ChosenDreams';
 import DreamUpdate from './containers/DreamUpdate';
 
+// import { connect } from 'react-redux';
+// import { fetchDreams } from './actions/dreamsActions';
+
 class App extends React.Component {
-  // constructor() {
-  //   super()
-  // }
-  
+// I added this
+//   constructor() {
+//     super();
+
+//     this.state = {
+//       id: '',
+//       name: '',
+//       description: '',
+//       chosen: false,
+//       term: ""
+//     }
+//   }
+//   componentDidMount(){
+//     this.props.fetchDreams()
+// }
+// up to this
+
   render() {
   
     return (
@@ -26,7 +42,7 @@ class App extends React.Component {
           <Route exact path="/" component={ Dreams } />
           <Route exact path="/dreams" component={ Dreams } />
           <Route exact path="/dreams/new" component={ DreamNew } />
-          <Route exact path="/dreams/chosen" component={ ChosenDreams } />
+          {/* <Route exact path="/dreams/chosen" component={ ChosenDreams } /> */}
           <Route exact path="/dreams/:id/update" component={ DreamUpdate } />
         </Switch>
         <Footer />
@@ -36,4 +52,11 @@ class App extends React.Component {
   );
   }
 }
+
+// const mapStateToProps = state => {
+//   return {
+//       dreams: state,
+//   }
+// }
+// export default connect(mapStateToProps, { fetchDreams })(App)
 export default App;
