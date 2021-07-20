@@ -67,12 +67,4 @@ const mapStateToProps = state => {
     }
 }
 
-// const dispatchToProps = dispatch => {
-//     return {
-//         fetchDreams: () => dispatch(fetchDreams())
-//     }
-// }
-
-// export default Dreams
 export default connect(mapStateToProps, { fetchDreams })(Dreams)
-// export default connect(mapStateToProps, dispatchToProps)(Dreams)

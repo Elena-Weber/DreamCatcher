@@ -36,7 +36,6 @@ export const removeDream = dreamID => {
 }
 
 export const updateDream = dream => {
-    // console.log('you are trying to update this dream, dream)
     return (dispatch) => {
         return fetch(`http://localhost:3000/dreams/${dream.id}`, {
             method: 'PATCH',
@@ -49,18 +48,3 @@ export const updateDream = dream => {
         })
     }
 }
-
-// export const toggleDream = dream => {
-//     console.log('you clicked this dream', dream)
-//     return (dispatch) => {
-//         return fetch(`http://localhost:3000/dreams/${dream.id}`,{
-//             method: 'PATCH',
-//             headers: { 'Content-Type': 'application/json' },
-//             body: JSON.stringify({dream: dream})
-//         })
-//             .then(resp => resp.json())
-//             .then(chDream => {
-//             dispatch({ type: "TOGGLE_DREAM", payload: chDream })
-//         })
-//     }
-// }

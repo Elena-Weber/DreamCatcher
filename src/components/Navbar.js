@@ -27,7 +27,6 @@ const onClickFive = () => {
         <div className="navi">
             <NavLink to="/">All your dreams </NavLink>|
             <NavLink to="/dreams/new"> Create a new dream </NavLink>
-            {/* <NavLink to="/dreams/chosen"> Tonight's Dream(s)</NavLink> */}
             <p> Change background image: <button onClick={onClickOne}>1</button><button onClick={onClickTwo}>2</button><button onClick={onClickThree}>3</button><button onClick={onClickFour}>4</button><button onClick={onClickFive}>5</button></p>
         </div>
     )
