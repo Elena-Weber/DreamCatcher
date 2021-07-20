@@ -34,11 +34,9 @@ class Dreams extends Component {
         let filteredDreams = this.props.dreams.filter(dream => dream.name.toLowerCase().includes(lowerStateTerm)
         )
         let updatedDreams = filteredDreams.reverse()
-        //  || dream.description.toLowerCase().includes(lowerStateTerm))
         console.log(filteredDreams)
         return (updatedDreams.map( (dream, index) => { return <Dream dream={dream} key={index} /> }))
         // return (filteredDreams.map( (dream, index) => { return <Dream dream={dream} key={index} /> }))
-        // return filteredDreams
     } 
 
     render() { console.log(this.state.term)

@@ -27,6 +27,7 @@ const dreamsReducer = (state = [], action) => {
             console.log(action.payload.id, "This is id from payload")
             //action.payload = dreamsArray(dreamToToggle)
             return [...dreamsArray]
+            // return [...dreamsArray, dreamToToggle: !dreamToToggle.chosen]
         default:
             return state
     }

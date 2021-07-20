@@ -7,7 +7,6 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import DreamNew from './containers/DreamNew';
 import Header from './components/Header';
 import ChosenDreams from './containers/ChosenDreams';
-// import Search from './containers/Search';
 import DreamUpdate from './containers/DreamUpdate';
 
 class App extends React.Component {
@@ -28,7 +27,6 @@ class App extends React.Component {
           <Route exact path="/dreams" component={ Dreams } />
           <Route exact path="/dreams/new" component={ DreamNew } />
           <Route exact path="/dreams/chosen" component={ ChosenDreams } />
-          {/* <Route exact path="/search" component={ Search } /> */}
           <Route exact path="/dreams/:id/update" component={ DreamUpdate } />
         </Switch>
         <Footer />

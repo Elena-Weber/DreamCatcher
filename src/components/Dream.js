@@ -15,7 +15,7 @@ const Dream = ({ dream, removeDream, updateDream, toggleDream }) => {
                         <h3 className="dreamName">Name: {dream.name}</h3>
                     </div>
                     <div className="flip-card-back">    
-                        <p>Description: {dream.description}</p><br />
+                        <p>Description: {dream.description}</p>
                         <div>
                             <button onClick={()=>toggleDream(dream)}>{!dream.chosen ? "Dream it!" : "You're dreaming it. Cancel?"}</button>
                         </div>
