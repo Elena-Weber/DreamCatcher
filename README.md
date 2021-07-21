@@ -1,70 +1,23 @@
-# Getting Started with Create React App
+This is FrontEnd for the project DreamCatcher. The BackEnd is here: https://github.com/Elena-Weber/DreamCatcher-BE.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Have you ever wanted to program your own dreams? Imagine you'd like to become a mermaid, a Wonder Woman, a Terminator or a dolphin for a night. We all know that in real life this is impossible. Or are you dreaming about visiting Ancient Rome or present-day North Pole? Not possible again! But wait a minute - there's nothing that you can't do in your dream. Human dreams have no limits and no boundaries! And I can help you with that.
+DreamCatcher is a workshop for dreams from the future. This is a single page application (SPA).
+Here is the application's functionality: it's full CRUD (a user can create, read, update and delete dreams). Each dream has a name and a description. The user can also search for a a dream, filter dreams by alphabet and creation day and change background image by clicking buttons.
 
-## Available Scripts
+Installation
 
-In the project directory, you can run:
+Fork the project's frontend from https://github.com/Elena-Weber/DreamCatcher and cd into the project folder.
 
-### `yarn start`
+Usage
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+To start the server, run in your terminal:
+$ yarn start
+If the browser page doesn't open on its own, open up a new tab in your browser (Chrome is recommended) and go to this page http://localhost:3001/. You should see the main (and only) page of the project. To stop the server, while in your terminal, press Control+C (for MacBook).
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Contributing
 
-### `yarn test`
+Bug reports and pull requests are welcome on GitHub at https://github.com/Elena-Weber/DreamCatcher. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the code of conduct.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+License
 
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+The program is available as open source under the terms of the MIT License.
