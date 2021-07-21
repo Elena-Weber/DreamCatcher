@@ -2,7 +2,7 @@ This is FrontEnd for the project DreamCatcher. The BackEnd is here: https://gith
 
 Have you ever wanted to program your own dreams? Imagine you'd like to become a mermaid, a Wonder Woman, a Terminator or a dolphin for a night. We all know that in real life this is impossible. Or are you dreaming about visiting Ancient Rome or present-day North Pole? Not possible again! But wait a minute - there's nothing that you can't do in your dream. Human dreams have no limits and no boundaries! And I can help you with that.
 DreamCatcher is a workshop for dreams from the future. This is a single page application (SPA).
-Here is the application's functionality: it's full CRUD (a user can create, read, update and delete dreams). Each dream has a name and a description. The user can also search for a a dream, filter dreams by alphabet and creation day and change background image by clicking buttons.
+Here is the application's functionality: it's full CRUD (a user can create, read, update and delete dreams). Each dream has a name and a description. The user can also search for a dream, filter dreams by alphabet and creation day and change background image by clicking buttons.
 
 Installation
 
