@@ -1,16 +1,14 @@
 import React from 'react';
-import './App.css';
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
-import Dreams from './containers/Dreams';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import DreamNew from './containers/DreamNew';
 import Header from './components/Header';
+import Navbar from './components/Navbar';
+import Dreams from './containers/Dreams';
+import DreamNew from './containers/DreamNew';
 import DreamUpdate from './containers/DreamUpdate';
+import Footer from './components/Footer';
+import './App.css';
 
-class App extends React.Component {
-
-  render() {
+const App = () => {
   
     return (
     <div className="App">
@@ -29,7 +27,6 @@ class App extends React.Component {
       </header>
     </div>
   );
-  }
 }
 
 export default App;

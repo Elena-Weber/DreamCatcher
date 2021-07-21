@@ -1,8 +1,8 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { removeDream } from '../actions/dreamsActions';
 import { updateDream } from '../actions/dreamsActions';
-import { NavLink } from 'react-router-dom';
 
 const Dream = ({ dream, removeDream, updateDream }) => {
 
@@ -27,4 +27,4 @@ const Dream = ({ dream, removeDream, updateDream }) => {
     )
 }
 
-export default connect(null, { removeDream, updateDream })(Dream)
+export default connect(null, { removeDream, updateDream })(Dream);

@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 
 class DreamNew extends Component {
     constructor(props) {
-        super(props)
+        super(props);
     
         this.state = {
             name: '',
@@ -15,7 +15,7 @@ class DreamNew extends Component {
     
     handleChange = e => {this.setState({[e.target.name]: e.target.value}); console.log(e.target.value)}
 
-    handleSubmit = e => {e.preventDefault(); this.props.addDream(this.state); this.props.history.push('/dreams'); console.log(e)}
+    handleSubmit = e => {e.preventDefault(); this.props.addDream(this.state); this.props.history.push('/dreams')}
 
     render() {
         return (
@@ -24,12 +24,12 @@ class DreamNew extends Component {
                 <form onSubmit={this.handleSubmit}>
                     <div>
                         <label htmlFor="nameInput">Dream's name: </label><br /><br />
-                        <input type="text" name="name" id="name" value={this.state.name} onChange={this.handleChange} placeholder="Name your dream" />
+                        <input type="text" name="name" id="name" value={this.state.name} onChange={this.handleChange} placeholder="Name your dream" required />
                     </div>
                     <br /><br /><br />
                     <div>
                         <label htmlFor="nameInput">Dream's details: </label><br /><br />
-                        <textarea type="text" name="description" id="description" rows="10" cols="80" value={this.state.description} onChange={this.handleChange} placeholder="To fully enjoy your custom-made dream, please provide as many details as possible" />
+                        <textarea type="text" name="description" id="description" rows="10" cols="80" value={this.state.description} onChange={this.handleChange} placeholder="To fully enjoy your custom-made dream, please provide as many details as possible" required />
                     </div>
                     <br /><br /><br />
                     <div>
@@ -41,4 +41,4 @@ class DreamNew extends Component {
     }
 }
 
-export default connect(null, {addDream})(DreamNew)
+export default connect(null, {addDream})(DreamNew);

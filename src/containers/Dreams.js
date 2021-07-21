@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import Dream from '../components/Dream';
 import { connect } from 'react-redux';
 import { fetchDreams } from '../actions/dreamsActions';
+import Dream from '../components/Dream';
 import Search from '../components/Search';
 import Filtering from '../components/Filtering';
 
@@ -26,18 +26,15 @@ class Dreams extends Component {
     
     searchDreams = (term) => {
         this.setState({
-            // ???
             term: term
         })
     }
 
     filterIt = () => {
         let lowerStateTerm = this.state.term.toLowerCase()
-        let filteredDreams = this.props.dreams.filter(dream => dream.name.toLowerCase().includes(lowerStateTerm)
-        )
-        console.log(filteredDreams)
+        let filteredDreams = this.props.dreams.filter(dream => dream.name.toLowerCase().includes(lowerStateTerm))
 
-        switch(this.state.sort){
+        switch(this.state.sort) {
             case "Alphabetically":
                 return filteredDreams.sort((a,b) => a.name > b.name ? 1 : -1).map( (dream, index) => { return <Dream dream={dream} key={index} /> })
             case "ReverseAlphabetically":
@@ -55,7 +52,7 @@ class Dreams extends Component {
         this.setState({ sort: sortBy })
     }
 
-    render() { console.log(this.state.term)
+    render() {
 
         return ( 
             <>
@@ -80,4 +77,4 @@ const mapStateToProps = state => {
     }
 }
 
-export default connect(mapStateToProps, { fetchDreams })(Dreams)
+export default connect(mapStateToProps, { fetchDreams })(Dreams);

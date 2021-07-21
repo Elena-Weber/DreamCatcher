@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
-import { updateDream } from '../actions/dreamsActions';
 import { connect } from 'react-redux';
+import { updateDream } from '../actions/dreamsActions';
 
 class DreamUpdate extends Component {
     constructor() {
-        super()
+        super();
     
         this.state = {
-                id: '',
-                name: '',
-                description: '',
-                chosen: false
-            }
+            id: '',
+            name: '',
+            description: '',
+            chosen: false
+        }
     }
 
     componentDidMount(){
@@ -23,12 +23,15 @@ class DreamUpdate extends Component {
         })
     }
 
-    handleChange = e => {this.setState({[e.target.name]: e.target.value}); console.log(e.target.value, this.props)}
+    handleChange = e => {
+        this.setState({[e.target.name]: e.target.value})
+    }
 
-    handleSubmit = e => {e.preventDefault(); this.props.updateDream(this.state); this.props.history.push('/dreams'); console.log(this.state)}
+    handleSubmit = e => {
+        e.preventDefault(); this.props.updateDream(this.state); this.props.history.push('/dreams')
+    }
 
-    render() { console.log(this.props)
-
+    render() {
         return (
             <div className="new-dream">
                 <h1>Edit your dream here</h1>
@@ -57,4 +60,4 @@ const mapStateToProps = (state, dreamId) => {
     return { dream: state.find(dream => dream.id === id) }
 }
 
-export default connect(mapStateToProps, {updateDream})(DreamUpdate)
+export default connect(mapStateToProps, {updateDream})(DreamUpdate);
