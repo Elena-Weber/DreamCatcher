@@ -14,7 +14,6 @@ class Dreams extends Component {
                 id: '',
                 name: '',
                 description: '',
-                chosen: false,
                 term: "",
                 sort: 'None'
             }
@@ -73,7 +72,7 @@ class Dreams extends Component {
 
 const mapStateToProps = state => {
     return {
-        dreams: state,
+        dreams: state
     }
 }
 

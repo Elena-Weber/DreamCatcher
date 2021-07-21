@@ -9,8 +9,7 @@ class DreamUpdate extends Component {
         this.state = {
             id: '',
             name: '',
-            description: '',
-            chosen: false
+            description: ''
         }
     }
 
@@ -18,8 +17,7 @@ class DreamUpdate extends Component {
         this.setState({
             id: this.props.dream.id,
             name: this.props.dream.name,
-            description: this.props.dream.description,
-            chosen: this.props.dream.chosen
+            description: this.props.dream.description
         })
     }
 

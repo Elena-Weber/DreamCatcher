@@ -8,8 +8,7 @@ class DreamNew extends Component {
     
         this.state = {
             name: '',
-            description: '',
-            chosen: false
+            description: ''
         }
     }
     
