@@ -59,15 +59,15 @@ class Dreams extends Component {
 
         return ( 
             <>
-                <div className="search">
-                <Search searchTermProp={this.state.term} search={this.searchDreams} />
-                </div>
                 <div className="filtering">
-                <Filtering sort={this.state.sort} updateSort={this.updateSort} />
+                    <Filtering sort={this.state.sort} updateSort={this.updateSort} />
+                </div><br />
+                <div className="search">
+                    <Search searchTermProp={this.state.term} search={this.searchDreams} />
                 </div>
                 <div>
-                <h2 className="dream-heading">All your custom-made dreams are here. Enjoy!</h2>
-                <div className="dreams">{this.filterIt()}</div>
+                    <h2 className="dream-heading">All your custom-made dreams are here. Enjoy!</h2>
+                    <div className="dreams">{this.filterIt()}</div>
                 </div>
             </>
         )

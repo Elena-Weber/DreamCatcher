@@ -14,7 +14,12 @@ body {
 .navi {
   text-align: center;
   font-size: large;
-  padding: 5px 0 20px 0;
+}
+
+.filtering {
+  text-align: center;
+  display: flex;
+  justify-content: center;
 }
 
 a {
@@ -22,7 +27,7 @@ a {
   color: white;
 }
 
-a:hover {
+a:hover, p:hover, .dream-heading:hover {
   animation: neon .08s ease-in-out infinite alternate;
 }
 
@@ -53,19 +58,14 @@ button {
   margin: 5px;
 }
 
-button:hover {
-  box-shadow: 1px 1px 5px 1px white;
+button:hover, .btn:hover {
+  box-shadow: 1px 1px 5px 1px #add4f4;
   cursor: pointer;
 }
 
 .btn {
   border-radius: 5px;
   padding: 5px 10px;
-}
-
-.btn:hover {
-  box-shadow: 1px 1px 5px 1px white;
-  cursor: pointer;
 }
 
 input {
