@@ -9,9 +9,16 @@ const dreamsReducer = (state = [], action) => {
             let newDreams = state.filter(dream => dream.id !== action.payload)
             return [...newDreams]
         case 'UPDATE_DREAM':
-            let dreamsAll = [...state]
-            // dreamsAll.findIndex(dream => dream.id === action.payload.id)
-            return [...dreamsAll, action.payload]
+            return state.map(dream => {
+                if( dream.id === action.payload.id) {
+                    return action.payload
+                } else {
+                    return dream
+                }
+            })
+            // OR THIS ALSO WORKS
+            //let dreamsAll = state.filter(dream => dream.id !== action.payload)
+            //return [...dreamsAll, action.payload]
         default:
             return state
     }
