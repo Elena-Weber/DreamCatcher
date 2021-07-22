@@ -10,7 +10,7 @@ const dreamsReducer = (state = [], action) => {
             return [...newDreams]
         case 'UPDATE_DREAM':
             let dreamsAll = [...state]
-            dreamsAll.findIndex(dream => dream.id === action.payload.id)
+            // dreamsAll.findIndex(dream => dream.id === action.payload.id)
             return [...dreamsAll, action.payload]
         default:
             return state
