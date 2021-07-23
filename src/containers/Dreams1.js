@@ -1,3 +1,5 @@
+// THIS IS A DREAMS RENDERING CONTAINER WITHOUT THUNK
+
 import React, { Component } from 'react';
 import Dream from '../components/Dream';
 import { fetchDreams } from '../actions/dreamsActions';
@@ -23,9 +25,6 @@ class Dreams1 extends Component {
         }, 5000)
     }
 
-    
-
-
     render() { console.log("We are in dreams render, state:", this.props.allDreams)
     let dreamsArray = this.props.allDreams.map( (dream, index) => { return <Dream dream={dream} key={index} /> })
         return (
@@ -47,5 +46,5 @@ const mapDispatchToProps = dispatch => {
         dreams: fetchDreams(dispatch)
     }
 };
-// export default connect(mapStateToProps, { fetchDreams })(Dreams1);
+
 export default connect(mapStateToProps, mapDispatchToProps)(Dreams1);

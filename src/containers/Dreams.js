@@ -1,9 +1,11 @@
+// THIS CONTAINER WORKS WITH THUNK ONLY
+
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchDreams } from '../actions/dreamsActions';
 import Dream from '../components/Dream';
-// import Search from '../components/Search';
-// import Filtering from '../components/Filtering';
+import Search from '../components/Search';
+import Filtering from '../components/Filtering';
 
 class Dreams extends Component {
 
@@ -13,54 +15,54 @@ class Dreams extends Component {
         this.state = {
                 id: '',
                 name: '',
-                description: ''//,
-                // term: "",
-                // sort: 'None'
+                description: '',
+                term: "",
+                sort: 'None'
             }
     }
 
-    // componentDidMount(){
-    //     this.props.fetchDreams()
-    // }
+    componentDidMount(){
+        this.props.fetchDreams()
+    }
 
-    // searchDreams = (term) => {
-    //     this.setState({
-    //         term: term
-    //     })
-    // }
+    searchDreams = (term) => {
+        this.setState({
+            term: term
+        })
+    }
 
-    // filterIt = () => {
-    //     let lowerStateTerm = this.state.term.toLowerCase()
-    //     let filteredDreams = this.props.dreams.filter(dream => dream.name.toLowerCase().includes(lowerStateTerm))
+    filterIt = () => {
+        let lowerStateTerm = this.state.term.toLowerCase()
+        let filteredDreams = this.props.dreams.filter(dream => dream.name.toLowerCase().includes(lowerStateTerm))
 
-    //     switch(this.state.sort) {
-    //         case "Alphabetically":
-    //             return filteredDreams.sort((a,b) => a.name > b.name ? 1 : -1).map( (dream, index) => { return <Dream dream={dream} key={index} /> })
-    //         case "ReverseAlphabetically":
-    //             return filteredDreams.sort((a,b) => a.name > b.name ? 1 : -1).reverse().map( (dream, index) => { return <Dream dream={dream} key={index} /> })    
-    //         case "CreationOld":
-    //             return filteredDreams.map( (dream, index) => { return <Dream dream={dream} key={index} /> })
-    //         case "CreationYoung":
-    //             return filteredDreams.reverse().map( (dream, index) => { return <Dream dream={dream} key={index} /> })    
-    //         default:
-    //             return filteredDreams.map( (dream, index) => { return <Dream dream={dream} key={index} /> })
-    //     }
-    // } 
+        switch(this.state.sort) {
+            case "Alphabetically":
+                return filteredDreams.sort((a,b) => a.name > b.name ? 1 : -1).map( (dream, index) => { return <Dream dream={dream} key={index} /> })
+            case "ReverseAlphabetically":
+                return filteredDreams.sort((a,b) => a.name > b.name ? 1 : -1).reverse().map( (dream, index) => { return <Dream dream={dream} key={index} /> })    
+            case "CreationOld":
+                return filteredDreams.map( (dream, index) => { return <Dream dream={dream} key={index} /> })
+            case "CreationYoung":
+                return filteredDreams.reverse().map( (dream, index) => { return <Dream dream={dream} key={index} /> })    
+            default:
+                return filteredDreams.map( (dream, index) => { return <Dream dream={dream} key={index} /> })
+        }
+    } 
 
-    // updateSort = sortBy => {
-    //     this.setState({ sort: sortBy })
-    // }
+    updateSort = sortBy => {
+        this.setState({ sort: sortBy })
+    }
 
     render() {
 
         return ( 
             <>
-                {/* <div className="filtering">
+                <div className="filtering">
                     <Filtering sort={this.state.sort} updateSort={this.updateSort} />
                 </div><br />
                 <div className="search">
                     <Search searchTermProp={this.state.term} search={this.searchDreams} />
-                </div> */}
+                </div>
                 <div>
                     <h2 className="dream-heading">All your custom-made dreams are here. Enjoy!</h2>
                     {/* <div className="dreams">{this.filterIt()}</div> */}

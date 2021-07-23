@@ -1,11 +1,5 @@
-// const dreamarr = [
-//     {id: 1, name: "One", description: "one"},
-//     {id: 2, name: "Two", description: "two"},
-//     {id: 3, name: "Three", description: "three"}
-// ]
-
 const dreamsReducer = (state = [], action) => {
-// const dreamsReducer = (state = dreamarr, action) => {
+
     switch (action.type) {
 
         case 'FETCH_DREAMS':

@@ -8,7 +8,6 @@
 //     }
 // }
 
-// const FETCH_DREAMS = "fetchdreams";
 let fetchDreamsURL = () => fetch("http://localhost:3000/dreams");
 let fetchDreamsFunc = async dispatch => {
         const response = await fetchDreamsURL();
