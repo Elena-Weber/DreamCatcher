@@ -20,9 +20,6 @@ class Dreams1 extends Component {
     componentDidMount(){
         console.log("Component did mount")
         this.props.dreams();
-        setTimeout(() => {
-            console.log("TIMEOUT", this.props.allDreams)
-        }, 5000)
     }
 
     render() { console.log("We are in dreams render, state:", this.props.allDreams)
