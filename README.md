@@ -1,4 +1,10 @@
-This is FrontEnd for the project DreamCatcher. The BackEnd is here: https://github.com/Elena-Weber/DreamCatcher-BE.
+This is FrontEnd for the project DreamCatcher.
+
+The BackEnd is here:
+https://github.com/Elena-Weber/DreamCatcher-BE.
+
+Video demo is here:
+https://youtu.be/X1MBd6Rv0yg
 
 Have you ever wanted to program your own dreams? Imagine you'd like to become a mermaid, a Wonder Woman, a Terminator or a dolphin for a night. We all know that in real life this is impossible. Or are you dreaming about visiting Ancient Rome or present-day North Pole? Not possible again! But wait a minute - there's nothing that you can't do in your dream. Human dreams have no limits and no boundaries! And I can help you with that.
 DreamCatcher is a workshop for dreams from the future. This is a single page application (SPA).
