@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
+// background change
 const Navbar = () => {
 
     const onClickOne = () => {
@@ -23,6 +24,7 @@ const Navbar = () => {
         document.body.style.backgroundImage = "url('https://images.unsplash.com/photo-1603037230301-51848967f152?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80')";
     }
 
+    // navigation links
     return (
         <div className="navi">
             <NavLink to="/">All your dreams </NavLink>|

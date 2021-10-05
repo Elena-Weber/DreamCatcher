@@ -10,7 +10,7 @@ import './App.css';
 
 const App = () => {
   
-    return (
+    return ( // this is what the whole page looks like, with all the components rendered
     <div className="App">
       <header className="App-header">
       <Router>

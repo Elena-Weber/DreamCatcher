@@ -1,13 +1,15 @@
+// fetching dreams from backend
 export const fetchDreams = () => {
     return (dispatch) => {
         return fetch('http://localhost:3000/dreams')
         .then(resp => resp.json())
         .then(dreams => {
-            dispatch({ type: "FETCH_DREAMS", payload: dreams })
+            dispatch({ type: "FETCH_DREAMS", payload: dreams }) // dispatch data to reducer
         })
     }
 }
 
+// creating a dream
 export const addDream = dream => {
     return (dispatch) => {
         return fetch('http://localhost:3000/dreams', {
@@ -17,11 +19,12 @@ export const addDream = dream => {
         })
         .then(resp => resp.json())
         .then(dream => {
-            dispatch({ type: "ADD_DREAM", payload: dream })
+            dispatch({ type: "ADD_DREAM", payload: dream }) // dispatch data to reducer
         })
     }
 }
 
+// deleting a dream
 export const removeDream = dreamID => {
     return (dispatch) => {
         return fetch(`http://localhost:3000/dreams/${dreamID}`,{
@@ -30,11 +33,12 @@ export const removeDream = dreamID => {
         })
         .then(resp => resp.json())
         .then(dream => {
-            dispatch({ type: "REMOVE_DREAM", payload: dream.id })
+            dispatch({ type: "REMOVE_DREAM", payload: dream.id }) // dispatch data to reducer
         })
     }
 }
 
+// editing a dream
 export const updateDream = dream => {
     return (dispatch) => {
         return fetch(`http://localhost:3000/dreams/${dream.id}`, {
@@ -44,7 +48,7 @@ export const updateDream = dream => {
         })
             .then(resp => resp.json())
             .then(updDream => {
-            dispatch({type: 'UPDATE_DREAM', payload: updDream})
+            dispatch({type: 'UPDATE_DREAM', payload: updDream}) // dispatch data to reducer
         })
     }
 }

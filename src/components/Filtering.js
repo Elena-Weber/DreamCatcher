@@ -1,5 +1,6 @@
 import React from 'react';
 
+ // buttons to sort dreams
 const Filtering = (props) => {
     return (
         <div className="filtering"><p>Sort dreams by:</p>

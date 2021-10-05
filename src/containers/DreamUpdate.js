@@ -6,14 +6,14 @@ class DreamUpdate extends Component {
     constructor() {
         super();
     
-        this.state = {
+        this.state = { // ww need to access these in state
             id: '',
             name: '',
             description: ''
         }
     }
 
-    componentDidMount(){
+    componentDidMount(){ // setting state after the component has loaded
         this.setState({
             id: this.props.dream.id,
             name: this.props.dream.name,
@@ -21,16 +21,16 @@ class DreamUpdate extends Component {
         })
     }
 
-    handleChange = e => {
+    handleChange = e => { // editing
         this.setState({[e.target.name]: e.target.value})
     }
 
-    handleSubmit = e => {
+    handleSubmit = e => { // submitting
         e.preventDefault(); this.props.updateDream(this.state); this.props.history.push('/dreams')
     }
 
     render() {
-        return (
+        return ( // what the form looks like
             <div className="new-dream">
                 <h1>Edit your dream here</h1>
                 <form onSubmit={this.handleSubmit}>
@@ -53,7 +53,7 @@ class DreamUpdate extends Component {
     }
 }
 
-const mapStateToProps = (state, dreamId) => {
+const mapStateToProps = (state, dreamId) => { // mapping state to props
     const id = parseInt(dreamId.match.params.id)
     return { dream: state.find(dream => dream.id === id) }
 }

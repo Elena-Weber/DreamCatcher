@@ -5,6 +5,7 @@ import Dream from '../components/Dream';
 import Search from '../components/Search';
 import Filtering from '../components/Filtering';
 
+// a dreams list
 class Dreams extends Component {
 
     constructor() {
@@ -20,16 +21,16 @@ class Dreams extends Component {
     }
 
     componentDidMount(){
-        this.props.fetchDreams()
+        this.props.fetchDreams() // display dreams after the component has loaded
     }
     
-    searchDreams = (term) => {
+    searchDreams = (term) => { // setting the state when search is activated
         this.setState({
             term: term
         })
     }
 
-    filterIt = () => {
+    filterIt = () => { // sorting dreams
         let lowerStateTerm = this.state.term.toLowerCase()
         let filteredDreams = this.props.dreams.filter(dream => dream.name.toLowerCase().includes(lowerStateTerm))
 
@@ -48,12 +49,12 @@ class Dreams extends Component {
     } 
 
     updateSort = sortBy => {
-        this.setState({ sort: sortBy })
+        this.setState({ sort: sortBy }) // sorting
     }
 
     render() {
 
-        return ( 
+        return ( // what the page displays
             <>
                 <div className="filtering">
                     <Filtering sort={this.state.sort} updateSort={this.updateSort} />
@@ -70,7 +71,7 @@ class Dreams extends Component {
     }
 }
 
-const mapStateToProps = state => {
+const mapStateToProps = state => { // mapping state to props
     return {
         dreams: state
     }

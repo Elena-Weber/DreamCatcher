@@ -14,6 +14,7 @@ document.addEventListener("click", (event) => {
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
+// creating the redux store to feed to provider
 let store = createStore(dreamsReducer, composeEnhancers(applyMiddleware(thunk)));
 
 ReactDOM.render(

@@ -2,11 +2,12 @@ import React, { Component } from 'react';
 import { addDream } from '../actions/dreamsActions';
 import { connect } from 'react-redux';
 
+// a form to create a new dream
 class DreamNew extends Component {
     constructor(props) {
         super(props);
     
-        this.state = {
+        this.state = { // what info is expected from a user
             name: '',
             description: ''
         }
@@ -17,7 +18,7 @@ class DreamNew extends Component {
     handleSubmit = e => {e.preventDefault(); this.props.addDream(this.state); this.props.history.push('/dreams')}
 
     render() {
-        return (
+        return ( // the form itself
             <div className="new-dream">
                 <h2>Create an amazing new dream here</h2>
                 <form onSubmit={this.handleSubmit}>

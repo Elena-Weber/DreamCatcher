@@ -1,4 +1,4 @@
-const dreamsReducer = (state = [], action) => {
+const dreamsReducer = (state = [], action) => { // responsible for what to display
     switch (action.type) {
 
         case 'FETCH_DREAMS':
